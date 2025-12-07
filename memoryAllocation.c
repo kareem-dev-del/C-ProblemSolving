@@ -6,6 +6,30 @@ int main(){
     int count=0;
 
     int *arr = (int*) malloc(size * sizeof(int));
+    if(arr == NULL) {
+        printf("Error: Memory not allocated\n");
+        return 1;
+    }
+
+
+    int num;
+    printf("Enter numbers (enter -1 to stop):\n");
+
+    while (1)
+    {
+        scanf("%d", &num);
+        if (num == -1)
+        break;
+
+        arr[count]=num;
+        count++; 
+    }
+
+
+    if(count == size) {
+    size = size * 2; 
+
+    arr = (int*) realloc(arr, size * sizeof(int);)
     
 
     return 0;
