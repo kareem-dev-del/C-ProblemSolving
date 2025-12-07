@@ -58,7 +58,7 @@ int main()
     float result = sum / count;
     printf("step(4): Average number of array: %0.2f \n", result);
 
-    printf("\nstep(5): All numbers of array \n");
+    printf("step(5): All numbers of array \n");
     for (int i = 0; i < count; i++)
     {
         printf("%d ", arr[i]);
