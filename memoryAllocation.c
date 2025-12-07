@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+// Program: Dynamic Array that grows automatically, prints count, min, max, average, and all numbers
+
+
 int main()
 {
     int size = 2;
