@@ -5,7 +5,7 @@ int main()
 {
     int size = 2;
     int count = 0;
-    float sum=0;
+    float sum = 0;
 
     int *arr = (int *)malloc(size * sizeof(int));
     if (arr == NULL)
@@ -20,7 +20,7 @@ int main()
     while (1)
     {
         scanf("%d", &num);
-        sum+=num;
+        sum += num;
         if (num == -1)
             break;
 
@@ -35,39 +35,34 @@ int main()
                 return 1;
             }
         }
-        
+
         arr[count] = num;
         count++;
     }
 
+    printf("step(1): count of number: %d \n", count);
 
-    printf("step(1): count of number: %d ",count);
-
-    int max=arr[0];
-    int min=arr[1];
-      for (int  i = 0; i < count; i++)
-      {
+    int max = arr[0];
+    int min = arr[0];
+    for (int i = 0; i < count; i++)
+    {
         if (arr[i] > max)
-           max=arr[i];
-        
-       else
-         min=arr[i];  
-      }
-       printf("step(2): Large number of array: %d ",max);
-       printf("step(3): Small number of array: %d ",min);
+            max = arr[i];
 
-      float result
-      
+        else
+            min = arr[i];
+    }
+    printf("step(2): Large number of array: %d \n", max);
+    printf("step(3): Small number of array: %d \n", min);
 
+    float result = sum / count;
+    printf("step(4): Average number of array: %0.2f \n", result);
 
-    // printf("\nYou entered:\n");
-    // for (int i = 0; i < count; i++)
-    // {
-    //     printf("%d ", arr[i]);
-    // }
-
-
-
+    printf("\nstep(5): All numbers of array \n");
+    for (int i = 0; i < count; i++)
+    {
+        printf("%d ", arr[i]);
+    }
 
     free(arr);
 
